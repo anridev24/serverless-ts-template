@@ -1,0 +1,22 @@
+service: ts-lambda-template
+frameworkVersion: "2"
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  main:
+    handler: handler.main
+    events:
+      - http:
+          path: test
+          method: get
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-scripts
+
+custom:
+  scripts:
+    hooks:
+      'before:package:initialize': npm run build
