@@ -1,3 +1,3 @@
-module.exports = async function start() {
-  console.log("Hello world! from Typescript");
+export const start = async function () {
+  console.log("Hello from TS");
 };

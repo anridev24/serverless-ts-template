@@ -1,14 +1,16 @@
 {
-  "extends": "./tsconfig.paths.json",
   "compilerOptions": {
-    "lib": ["ESNext"],
     "moduleResolution": "node",
-    "module": "ES6",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "removeComments": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "incremental": true,
     "sourceMap": true,
-    "target": "ES2020",
+    "target": "es2017",
     "outDir": "./dist/"
   },
   "include": ["src/**/*.ts"],

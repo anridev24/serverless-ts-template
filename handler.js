@@ -1,11 +1,11 @@
 "use strict";
 
-const start = require("./dist/main");
+const app = require("./dist/main");
 
 module.exports.main = async (event) => {
-  await start();
+  await app.start();
   return {
     statusCode: 200,
-    body: JSON.stringify({ message: "Function Executed Successfully!", input: event }, null, 2),
+    body: JSON.stringify({ message: "Function Executed Successfully!" }, null, 2),
   };
 };
