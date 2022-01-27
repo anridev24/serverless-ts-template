@@ -2,11 +2,13 @@ service: ts-lambda-template
 frameworkVersion: "2"
 provider:
   name: aws
-  runtime: nodejs12.x
+  region: eu-central-1
+  runtime: nodejs14.x
 
 functions:
   main:
     handler: handler.main
+    timeout: 30
     events:
       - http:
           path: test
@@ -15,8 +17,9 @@ functions:
 plugins:
   - serverless-offline
   - serverless-plugin-scripts
+  - serverless-dotenv-plugin
 
 custom:
   scripts:
     hooks:
-      'before:package:initialize': npm run build
+      "before:package:initialize": npm run build

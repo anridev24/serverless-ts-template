@@ -1,3 +1,1 @@
-export const start = async function () {
-  console.log("Hello from TS");
-};
+export const start = async function () {};

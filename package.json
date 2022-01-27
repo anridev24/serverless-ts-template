@@ -1,17 +1,22 @@
 {
   "dependencies": {
-    "concurrently": "^7.0.0",
-    "dotenv": "^14.2.0"
+    "dotenv": "^14.2.0",
+    "signale": "^1.4.0"
   },
   "devDependencies": {
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
+    "typescript": "^4.5.5",
+    "serverless-dotenv-plugin": "^3.12.2",
     "serverless-offline": "^8.3.1",
     "serverless-plugin-scripts": "^1.0.2",
-    "typescript": "^4.5.4"
+    "serverless-plugin-typescript": "^2.1.0",
+    "@types/signale": "^1.4.4",
+    "@types/node": "^17.0.13"
   },
   "scripts": {
-    "dev": "rimraf dist && mkdir dist && concurrently \"tsc -w\" \"serverless offline --httpPort 4001 \"",
+    "dev": "rimraf dist && mkdir dist && tsc -w",
+    "offline": "serverless offline --httpPort 4001",
     "format": "prettier --write .",
     "build": "rimraf dist && mkdir dist && tsc"
   }
