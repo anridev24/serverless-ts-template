@@ -9,3 +9,10 @@
 - **dev** - start a development server
 - **format** - format propject using prettier
 - **build** - compiles Javascript to Typescript before packaging serverless function
+
+
+# Usage
+
+ - **Terminal 1** - run `npm run dev`  
+ - **Terminal 2** - run `serverless offline`  
+ Enjoy 😊
