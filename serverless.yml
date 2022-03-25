@@ -14,10 +14,16 @@ functions:
           path: test
           method: get
 
+package:
+  excludeDevDependencies: false
+  individually: true
+
 plugins:
   - serverless-offline
   - serverless-plugin-scripts
   - serverless-dotenv-plugin
+  - serverless-plugin-common-excludes
+  - serverless-plugin-include-dependencies
 
 custom:
   scripts:
