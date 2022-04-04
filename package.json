@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "dotenv": "^14.2.0",
+    "husky": "^7.0.4",
     "serverless": "^2.72.2",
     "signale": "^1.4.0"
   },
@@ -22,5 +23,10 @@
     "offline": "serverless offline --httpPort 4001",
     "format": "prettier --write .",
     "build": "rimraf dist && mkdir dist && tsc"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "prettier --write . && git add -A ."
+    }
   }
 }
