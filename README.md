@@ -8,7 +8,7 @@
 
 - **dev** - start a development server
 - **format** - format propject using prettier
-- **build** - compiles Javascript to Typescript before packaging serverless function
+- **build** - compiles Javascript to Typescript before packaging serverless function (runs before deploy)
 
 
 # Usage
