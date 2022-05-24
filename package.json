@@ -21,7 +21,7 @@
   },
   "scripts": {
     "dev": "rimraf dist && mkdir dist && tsc -w",
-    "dev-nosls": "ts-node src/main.ts",
+    "dev-nosls": "ts-node nosls-run.ts",
     "offline": "serverless offline --httpPort 4001",
     "format": "prettier --write .",
     "build": "rimraf dist && mkdir dist && tsc"
