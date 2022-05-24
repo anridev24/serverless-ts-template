@@ -1,5 +1,15 @@
-import * as dotenv from "dotenv";
-dotenv.config();
+import "dotenv/config";
+import signale from "signale";
 
-// export const airtableAPIKey = process.env.AIRTABLE_API_KEY;
-// export const intercomToken = process.env.INTERCOM_TOKEN;
+const config = {
+  SECRET_TOKEN: process.env.SECRET_TOKEN || "",
+};
+
+for (const key in config) {
+  if (!config[key as keyof typeof config]) {
+    signale.fatal(`Missing ${key} in .env`);
+    process.exit(1);
+  }
+}
+
+export default config;
