@@ -2,7 +2,8 @@
   "dependencies": {
     "dotenv": "^14.2.0",
     "serverless": "^2.72.2",
-    "signale": "^1.4.0"
+    "signale": "^1.4.0",
+    "ts-node": "^10.8.0"
   },
   "devDependencies": {
     "@types/dotenv": "^8.2.0",
@@ -20,6 +21,7 @@
   },
   "scripts": {
     "dev": "rimraf dist && mkdir dist && tsc -w",
+    "dev-nosls": "ts-node src/main.ts",
     "offline": "serverless offline --httpPort 4001",
     "format": "prettier --write .",
     "build": "rimraf dist && mkdir dist && tsc"
