@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "offline": "serverless offline --httpPort 4001",
+    "format": "prettier --write .",
+    "precommit": "pretty-quick --staged"
+  },
   "dependencies": {
     "dotenv": "^14.2.0",
     "serverless": "^2.72.2",
@@ -21,10 +26,5 @@
     "serverless-plugin-scripts": "^1.0.2",
     "serverless-plugin-typescript": "^2.1.2",
     "typescript": "^4.5.5"
-  },
-  "scripts": {
-    "offline": "serverless offline --httpPort 4001",
-    "format": "prettier --write .",
-    "precommit": "pretty-quick --staged"
   }
 }

@@ -1,18 +1,16 @@
-**⚠ modifing handler.js is not recomended ⚠**
+# serverless-ts-template
 
-    - During Development run "npm run dev" for typescript watch mode
-    - run "serverless deploy to deploy"
-    - run "serverless offline for offline testing"
+## Description
+
+easy to use template for aws serverless framework, feel free to submit any issues/bugs.
 
 # Scripts
 
-- **dev** - start a development server
+- **offline** - start lambda offline (default port **_4001_**)
 - **format** - format propject using prettier
-- **build** - compiles Javascript to Typescript before packaging serverless function (runs before deploy)
 
+<br/><br/>
 
-# Usage
-
- - **Terminal 1** - run `npm run dev`  
- - **Terminal 2** - run `serverless offline`  
- Enjoy 😊
+**_author anridev24_**
+<br/><br/>
+Enjoy 😊
