@@ -1,6 +1,9 @@
 import signale from "signale";
-import config from "./config";
 
-export const start = async function () {
-  signale.debug(config.SECRET_TOKEN);
+const main = async function () {
+  signale.log("Hello world");
+};
+
+export const functions = {
+  main,
 };

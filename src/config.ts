@@ -2,7 +2,7 @@ import "dotenv/config";
 import signale from "signale";
 
 const config = {
-  SECRET_TOKEN: process.env.SECRET_TOKEN || "",
+  // SECRET_TOKEN: process.env.SECRET_TOKEN || "",
 };
 
 for (const key in config) {

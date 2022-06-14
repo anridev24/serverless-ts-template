@@ -1,9 +1,9 @@
 "use strict";
 
-const app = require("./dist/main");
+import { functions } from "./src/main";
 
-module.exports.main = async (event) => {
-  const response = await app.start();
+module.exports.main = async (event: any) => {
+  const response = await functions.main();
 
   return {
     statusCode: 200,
